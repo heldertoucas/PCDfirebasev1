@@ -11,11 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # ----> ADICIONE ESTE PASSO <----
-      - name: Install Dependencies
+      - name: Install Root Dependencies
         run: npm ci
-      # ---------------------------------
-      - run: npm run build
+      # ----> ADICIONE ESTE NOVO BLOCO <----
+      - name: Install Functions Dependencies
+        run: npm ci
+        working-directory: ./functions
+      # -------------------------------------
+      - name: Build Project
+        run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
