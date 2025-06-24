@@ -16,7 +16,7 @@ export default function HomePage() {
 
         {/* Subtítulo / Missão */}
         <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-600">
-          A nossa missão é promover o desenvolvimento de competências digitais
+          A nossa missão é promover, o desenvolvimento de competências digitais
           básicas para todos.  Procuramos desmistificar o uso quotidiano da
           tecnologia, para que os cidadãos possam, de uma forma simples e
           prática, ultrapassar receios e encontrar vantagens na sua utilização. 
